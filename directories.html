@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GRoselyn Directories</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css"/>
+    <link rel="stylesheet" href="directories.css">
+  </head>
+
+  <body style="font-family: Arial;">
+    <h1 class="title-page" style="text-align: center;">
+      Groselyn Directories
+    </h1>
+
+    <table id="item-price" class="display" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Details</th>
+                <th>Item Price</th>
+            </tr>
+          </thead>
+    </table>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+
+    <script>
+      new DataTable('#item-price', {
+        ajax: 'https://script.google.com/macros/s/AKfycbyiPa-RRO6sHxRTKS940mplXwM7XP-P3VbjnW8PQj8sP_wafZQwb9-FbIhrIfgv-8I6gg/exec',
+        columns: [
+            { data: 'Item Name' },
+            { data: 'Item Details' },
+            { data: 'Item Price' },
+          ]
+      }); 
+    </script>
+
+  </body>
+</html>
